@@ -20,4 +20,22 @@ function validateDateTime() {
     } else {
         document.getElementById("error").innerText = "";
     }
+    
+}
+
+function handleSubmit(event) {
+    event.preventDefault();
+
+    const classChoice = document.querySelector('input[name="class"]:checked').value;
+    const date = document.getElementById("date").value;
+    const time = document.getElementById("time").value;
+
+    fetch("https://script.google.com/a/macros/g.rit.edu/s/AKfycbyGEi3GXIJ96lx_nWWsCsbzEiQj6x1a3V9RY-u8a14vc5IyGcXWZw9mWNLOwSHXRfyS/exec", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ classChoice, date, time })
+    })
+    .then(response => response.text())
+    .then(data => alert(data))
+    .catch(error => console.error("Error:", error));
 }
