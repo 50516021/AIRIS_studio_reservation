@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive Form</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to CSS -->
+    <script src="script.js" defer></script> <!-- Link to JavaScript -->
+</head>
+<body>
+    <h2>Which class are you taking?</h2>
+    <form>
+        <label>
+            <input type="radio" name="class" value="EEET361" onclick="validateDateTime()"> EEET361
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="class" value="EEET451" onclick="validateDateTime()"> EEET451
+        </label>
+        <br><br>
+        <label>
+            Date: <input type="date" id="date" onchange="validateDateTime()">
+        </label>
+        <br><br>
+        <label>
+            Time: <input type="time" id="time" onchange="validateDateTime()">
+        </label>
+        <br><br>
+        <p id="error" style="color: red;"></p>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
