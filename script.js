@@ -30,7 +30,7 @@ function handleSubmit(event) {
     const date = document.getElementById("date").value;
     const time = document.getElementById("time").value;
 
-    fetch("https://script.google.com/a/macros/g.rit.edu/s/AKfycbyGEi3GXIJ96lx_nWWsCsbzEiQj6x1a3V9RY-u8a14vc5IyGcXWZw9mWNLOwSHXRfyS/exec", {
+    fetch("https://script.google.com/a/macros/g.rit.edu/s/AKfycbyl1h4dSpGYDmyV4c1qQqLYQGnEFeL9263mE3yuPxPGlwKGz2ONV1Qe9i6edzpLaHrx/exec", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ classChoice, date, time })
